@@ -1,0 +1,103 @@
+KELOMPOK 3
+1. DZAKY MUHAMAD ABDUL AZIS (09011382328124)
+2. MUHAMMAD DZAKY ALHANIF (09011282328037)
+3. OCHA ADELIA (09011382328126)
+4. CINTYA MAHARANI (09011382328130)
+5. RAYSHA MAHARANI (09011382328142)
+6. MUHAMMAD IRSYAD HAFIDZ (09011382328155)
+7. ALYA SAIRA PUTRI (09011382328159)
+8. IVAN ZAMARANO (09011382328160)
+
+
+NO 1
+public class satu {
+    public static int getTotal(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    public static void main(String[] args) {
+        int result = getTotal(4, 9);
+        System.out.println("Total: " + result);
+    }
+}
+
+
+NO 2
+public class dua {
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+
+    public static void main(String[] args) {
+        int numToCheck = 5;
+        System.out.println(numToCheck + " is even: " + isEven(numToCheck));
+    }
+}
+
+NO 3
+import java.util.Scanner;
+
+public class tiga {
+    public static boolean isVowel(char ch) {
+        return "aeiouAEIOU".contains(String.valueOf(ch));
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukkan sebuah string: ");
+        String inputString = scanner.nextLine();
+
+        int vowelCount = 0;
+        for (char ch : inputString.toCharArray()) {
+            if (isVowel(ch)) {
+                vowelCount++;
+            }
+        }
+
+        System.out.println("Jumlah vokal dalam string: " + vowelCount);
+    }
+}
+
+NO 4
+public class empat {
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int numToCheck = 5;
+        System.out.println(numToCheck + " is prime: " + isPrime(numToCheck));
+    }
+}
+
+NO 5
+public class lima {
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Bilangan prima antara 1 sampai 500:");
+        for (int i = 2; i <= 500; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
